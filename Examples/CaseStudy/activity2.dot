@@ -1,0 +1,28 @@
+digraph{
+name= "an activity graph"
+	0 [type = "A" , label = "Start"]
+	1 [type = "System" , label = "System:display the main screen"]
+	2 [type = "user" , label = "User:want to look for a book"]
+	3 [type = "C" , label = "",shape=diamond]
+	4 [type = "System" , label = "System:display recommended books"]
+	5 [type = "user" , label = "User:select a book"]
+        6 [type = "System" , label = "System:display details of a book"]
+	7 [type = "user",label = "User:click adding the book"]
+	8 [type = "C",label = "",shape=diamond]
+	9 [type = "System" , label = "System:add book to cart"]
+	10 [type = "E" , label = "End"]
+
+	0->1[type = "D",label = ""]
+	1->2[type = "D",label = ""]
+	2->3[type = "D",label = ""]
+	3->4[type = "C",label = "browse"]
+	3->10[type = "C",label = "exit"]
+	4->5[type = "D",label = ""]
+	5->6[type = "D",label = ""]
+	6->7[type = "D",label = ""]
+	7->8[type = "D",label = ""]
+	8->9[type = "C",label = "click"]
+	8->2[type = "C",label = "reject"]
+	9->10[type = "D",label = ""]
+	
+}

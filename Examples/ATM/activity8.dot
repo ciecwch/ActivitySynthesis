@@ -1,0 +1,32 @@
+digraph{
+name= "Validate PIN"
+	0 [type = "Start" , label = "Enter"]
+	1 [type = "card reader" , label = "sends the ATM card information"]
+	2 [type = "System" , label = "recognizes the ATM card"]
+	3 [type = "C" , label = "",shape=diamond]
+	4 [type = "System" , label = "reads ATM card number"]
+	5 [type = "System" , label = "prompts ATM customer for PIN number"]
+	6 [type = "ATM customer" , label = "enters PIN number"]
+	7 [type = "System" , label = "validates the expiration date is valid"]
+	8 [type = "C" , label = "",shape=diamond]
+	9 [type = "System" , label = "displays warning message"]
+	10 [type = "System" , label = "confiscates ATM card"]
+	11 [type = "System" , label = "displays a Welcome message"]
+	12 [type = "System" , label = "ATM customer PIN number has been validated"]
+	13 [type = "Pre" , label = "validate PIN"]
+
+	0->1[type = "D",label = ""]
+	1->2[type = "D",label = ""]
+	2->3[type = "D",label = ""]
+	3->4[type = "C",label = "yes"]
+	4->5[type = "D",label = ""]
+	5->6[type = "D",label = ""]
+	6->7[type = "D",label = ""]
+	7->8[type = "D",label = ""]
+	8->9[type = "C",label = "no"]
+	9->10[type = "D",label = ""]
+	10->11[type = "D",label = ""]
+	11->12[type = "D",label = ""]
+	12->13[type = "D",label = ""]
+
+}

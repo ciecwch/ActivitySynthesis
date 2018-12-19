@@ -1,0 +1,24 @@
+digraph{
+name= "withdraw Fund"
+	0 [type = "Pre" , label = "validate PIN"]
+	1 [type = "customer" , label = "selects Withdrawal"]
+	2 [type = "customer" , label = "enters withdrawal"]
+	3 [type = "customer" , label = "selects account number"]
+	4 [type = "System" , label = "validates account"]
+	5 [type = "C" , label = "",shape=diamond]
+	6 [type = "System",label = "display apology information"]
+	7 [type = "System" , label = "ejects ATM card"]
+	8 [type = "System" , label = "displays Welcome message"]
+	9 [type = "Post" , label = "ATM customer funds have not been withdrawn"]
+
+	0->1[type = "D",label = ""]
+	1->2[type = "D",label = ""]
+	2->3[type = "D",label = ""]
+	3->4[type = "D",label = ""]
+	4->5[type = "D",label = ""]
+	5->6[type = "C",label = "no"]
+	6->7[type = "D",label = ""]
+	7->8[type = "D",label = ""]
+	8->9[type = "D",label = ""]
+
+}
